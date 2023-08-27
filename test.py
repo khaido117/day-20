@@ -2,11 +2,12 @@ from turtle import Turtle, Screen
 
 tim = Turtle()
 screen = Screen()
-screen.exitonclick()
+
+def move_forward():
+    tim.forward(10)
 
 screen.listen()
-screen.onkey(f, "Up")
+screen.onkey(move_forward, "w")
 
-tim.heading(90)
-tim.forward(90)
 
+screen.exitonclick()
